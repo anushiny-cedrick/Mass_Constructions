@@ -5,7 +5,7 @@ import AutoCAD from "../../assets/Autocad-Logo.png"
 import Revit from "../../assets/revit-logo.png"
 import chief from "../../assets/chief.png"
 import Lumion from "../../assets/lumion.png"
-import ArchiCAD from "../../assets/ArchiCAD.png"
+import ArchiCAD from "../../assets/ArchiCad.png"
 
 const TechnologySection = () => {
     const tools = [
