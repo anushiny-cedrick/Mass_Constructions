@@ -1,0 +1,126 @@
+.about-us {
+    padding: 6rem 2rem;
+    background: #f9f9f9;
+    color: #054b44;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-header h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.about-header p {
+    font-size: 1.25rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.about-line {
+    width: 80px;
+    height: 4px;
+    background: #054b44;
+    margin: 1rem auto;
+}
+
+.about-section {
+    margin-bottom: 4rem;
+}
+
+.about-section h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.team-member h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.team-member span {
+    color: #888;
+    font-size: 0.95rem;
+}
+
+/* Awards List */
+.awards-certifications ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Team Member Social Icons */
+.team-member .social-icons {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.team-member .social-icons a {
+    color: #054b44;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.team-member .social-icons a:hover {
+    color: #FFD700;
+    transform: translateY(-3px);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-section h3 {
+        font-size: 1.5rem;
+    }
+}

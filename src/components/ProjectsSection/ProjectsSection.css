@@ -1,0 +1,254 @@
+.projects-section {
+    padding: 6rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+    color: #002366;
+}
+
+.projects-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.projects-header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.header-line {
+    width: 80px;
+    height: 4px;
+    background: #ffd700;
+    margin: 1rem auto 4rem;
+    border-radius: 10px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.project-card {
+    background: white;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    max-width: 400px;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.main-image,
+.progress-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.6s ease;
+}
+
+.progress-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+.image-container::before {
+    content: "3D Design";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(5, 75, 51, 0.85);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    z-index: 2;
+    font-weight: 600;
+}
+
+.project-card:hover .image-container::before {
+    content: "Live Progress";
+    background: rgba(255, 215, 0, 0.9);
+    color: #002366;
+}
+
+.project-card:hover .progress-image {
+    opacity: 1;
+}
+
+.project-content {
+    padding: 1.8rem;
+    text-align: left;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    color: #054b33;
+    margin-bottom: 0.5rem;
+}
+
+.project-type {
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #ffd700;
+    width: 0;
+    border-radius: 6px;
+    transition: width 1.5s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #054b33;
+    margin-bottom: 1rem;
+}
+
+.view-btn {
+    display: inline-block;
+    background: #054b33;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+    background: #ffd700;
+    color: #002366;
+    transform: translateY(-3px);
+}
+
+/* ===== Modal ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.4s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #054b33;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.timeline {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.timeline-step {
+    background: #f3f3f3;
+    border-left: 6px solid #054b33;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    position: relative;
+}
+
+.timeline-step img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-step.completed {
+    border-left-color: #0da850;
+}
+
+.timeline-step.in {
+    border-left-color: #ffd700;
+}
+
+.timeline-step.pending {
+    border-left-color: #ccc;
+}
+
+.status {
+    font-weight: 600;
+    color: #777;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
